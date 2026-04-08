@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruitopia</title>
+  <link rel="stylesheet" href="checkout.css">
+      <!-------------------------Font Awesome Icons --------------->  
+  <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
+  <!----------x---------------Font Awesome Icons --------x------->
+
+  <!----------x---------------Google font --------x------->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display:swap">
+       <!----------x---------------Google font --------x----------------->
+ 
+  
+</head>
+  
+<body>
+    <div class="container">
+        <div class="card">
+          <button class="proceed">
+            <svg class="sendicon" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+            </svg>
+        </button>
+         <img src="https://seeklogo.com/images/V/VISA-logo-62D5B26FE1-seeklogo.com.png" class="logo-card">
+       <label>Card number:</label>
+       <input id="user" type="text" class="input cardnumber"  placeholder="1234 5678 9101 1121">
+       <label>Name:</label>
+       <input class="input name"  placeholder="Maithilee">
+       <label class="toleft">CCV:</label>
+       <input class="input toleft ccv" placeholder="321">
+        </div>
+        <div class="receipt">
+          <div class="col"><p>Cost:</p>
+          <h2 class="cost">$400</h2><br>            
+          </div>
+          <p class="comprobe">This information will be sended to your email</p>
+        </div>
+        </div>
+    
+      <script>
+        const displayTotalAmount = () => {
+            const totalAmount = localStorage.getItem('totalAmount');
+            const priceElement = document.querySelector('.cost'); // Adjust selector as needed
+            if (totalAmount) {
+                priceElement.innerText = `$${totalAmount}`; // Display total amount
+            } else {
+                priceElement.innerText = 'Total not available';
+            }
+        }
+    
+        displayTotalAmount(); // Call the function to display the total
+    </script>
+    <!-- HTML structure to display cart items -->
+
+<script>
+  const displayCartItems = () => {
+      const cartItems = localStorage.getItem('cartItems');
+      const cartListElement = document.querySelector('#cart-list');
+      if (cartItems) {
+          const cartItemsArray = JSON.parse(cartItems);
+          cartItemsArray.forEach((item) => {
+              const listItem = document.createElement('li');
+              listItem.innerText = `${item.name} x ${item.quantity} = $${item.price * item.quantity}`;
+              cartListElement.appendChild(listItem);
+          });
+      } else {
+          cartListElement.innerText = 'No items in cart';
+      }
+  }
+
+  displayCartItems(); // Call the function to display cart items
+</script>
+<script src="checkout.js"></script>
+
+</body>
+</html>

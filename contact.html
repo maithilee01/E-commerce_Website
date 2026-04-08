@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fruitopia</title>
+
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+	<header>
+		<nav id="nav-bar">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="aboutus.html" class="nav-link">ABOUT</a>
+            <a href="Product.html" class="nav-link">CATEGORY</a>
+            <a href="contact.html" class="nav-link">CONTACT US</a>
+            <a href="login.html" class="nav-link">LOGIN</a>
+          </nav>
+	</header>
+	
+    <!-- Contact Us Form code -->
+     <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="1892ab17-087e-467f-aa62-e6420ff8c640">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit<img src="assest/arrow.png" alt=""></button>
+        </form>
+        <div class="contact-right">
+            <img src="/assest/main img.png" alt="">
+        
+        </div>
+     </div>
+</body>
+</html>

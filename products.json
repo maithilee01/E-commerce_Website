@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "name":"Dragon fruit",
+        "price": 200,
+        "image": "Dragon fruit (Pitaya).jpg"
+    },
+    {
+        "id": 2,
+        "name":" Guava",
+        "price": 250,
+        "image": "Guava.jpg"
+    },
+    {
+        "id": 3,
+        "name":" Honeydew",
+        "price": 290,
+        "image": "Honeydew.jpg"
+    },
+    {
+        "id": 4,
+        "name":" Mango",
+        "price": 200,
+        "image": "mango.jpg"
+    },
+    {
+        "id": 5,
+        "name":" papaya",
+        "price": 300,
+        "image": "papaya.jpg"
+    },
+    
+    {
+        "id": 6,
+        "name":"pinapple ",
+        "price": 300,
+        "image": "pinapple.jpg"
+    },
+    {
+        "id": 7,
+        "name":" Watermelon",
+        "price": 250,
+        "image": "Watermelon.jpg"
+    },{
+        "id": 8,
+        "name":" Muskmelon",
+        "price": 150,
+        "image": "muskmelon.jpg"
+    },
+    {
+        "id": 9,
+        "name":" kiwifruit",
+        "price": 100,
+        "image": "Kiwifruit.jpg"
+    },
+    {
+        "id": 10,
+        "name":" Orange",
+        "price": 200,
+        "image": "c4.jpg"
+    },
+    {
+        "id": 11,
+        "name":" Durian",
+        "price": 85,
+        "image": "Durian.jpg"
+    }
+
+
+
+]
